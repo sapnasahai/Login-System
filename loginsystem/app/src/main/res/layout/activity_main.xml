@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    tools:context=".MainActivity">
+
+
+    <!-- transparent layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@+id/sign_in"
+        android:padding="28dp">
+
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="SignUp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="540dp"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textColor="@color/my_primary"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:text="please register with your information" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/done_icon"
+                android:hint="UserName" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_below = "@+id/username"/>
+
+            <EditText
+                android:id="@+id/re_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="retype password"
+                android:inputType="textPassword"
+                android:layout_marginTop="25dp"
+                android:layout_below = "@+id/password"/>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:layout_marginTop="25dp"
+                app:cornerRadius="32dp"
+                android:layout_below = "@+id/re_password"/>
+
+            <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_in_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Existing user! Go to Sign in page"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            app:cornerRadius="32dp"
+            android:layout_below="@+id/signup_btn"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
